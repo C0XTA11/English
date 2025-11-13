@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1f1f3a;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+header h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ff69b4;
+}
+
+.setting select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+#start-btn {
+    background-color: #ff69b4;
+    color: #1a1a2e;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-btn:hover {
+    background-color: #ff85c1;
+}
+
+.challenge {
+    margin-top: 30px;
+}
+
+.phrasal-verb {
+    font-size: 2em;
+    font-weight: 600;
+    color: #17e9e1;
+    margin-bottom: 20px;
+}
+
+.synonyms {
+    display: flex;
+    justify-content: space-around;
+}
+
+.synonym {
+    background-color: #1a1a2e;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid #17e9e1;
+    width: 30%;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.synonym:hover {
+    background-color: #2a2a4a;
+    transform: translateY(-5px);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dig's Phrasal Verb Speaking Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dig's Phrasal Verb Speaking Challenge</h1>
+        </header>
+        <main>
+            <div class="settings">
+                <div class="setting">
+                    <label for="level">Level:</label>
+                    <select id="level">
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label for="duration">Duration:</label>
+                    <select id="duration">
+                        <option value="60">1 minute</option>
+                        <option value="120">2 minutes</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label for="interval">Interval:</label>
+                    <select id="interval">
+                        <option value="15">15 seconds</option>
+                        <option value="20">20 seconds</option>
+                        <option value="25">25 seconds</option>
+                    </select>
+                </div>
+            </div>
+            <button id="start-btn">Start</button>
+            <div class="challenge" style="display: none;">
+                <div class="phrasal-verb"></div>
+                <div class="synonyms">
+                    <div class="synonym"></div>
+                    <div class="synonym"></div>
+                    <div class="synonym"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
