@@ -3,60 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rainbow Words Adventure • A1 ESL</title>
+  <title>ESL Energy Rush</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background-blobs" aria-hidden="true">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
+  <div class="aurora" aria-hidden="true">
+    <span></span><span></span><span></span>
   </div>
 
   <main class="app">
-    <header class="hero">
-      <p class="badge">A1 Vocabulary Adventure</p>
-      <h1>Rainbow Words Adventure 🌈</h1>
-      <p class="subtitle">
-        Learn everyday English words with pictures, games, stars, and sound!
-      </p>
+    <header class="topbar">
+      <div>
+        <p class="tag">Infinite ESL Sprint</p>
+        <h1>Energy English ⚡</h1>
+      </div>
+      <button id="sound-toggle" class="sound-btn" type="button" aria-pressed="true">🔊</button>
     </header>
 
-    <section class="dashboard" aria-live="polite">
-      <div class="pill">Level: <strong>A1</strong></div>
-      <div class="pill">Round: <strong id="round">1</strong> / <span id="total-rounds">8</span></div>
-      <div class="pill">Stars: <strong id="stars">0</strong> ⭐</div>
-      <button id="sound-toggle" class="icon-btn" type="button" aria-pressed="true">🔊 Sound ON</button>
+    <section class="stats" aria-live="polite">
+      <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+      <div class="stat"><span>Streak</span><strong id="streak">0</strong></div>
+      <div class="stat"><span>Mode</span><strong id="mode">Emoji ➜ Word</strong></div>
     </section>
 
-    <section class="scene">
-      <div class="word-card">
-        <div class="emoji" id="emoji" aria-hidden="true">🍎</div>
-        <h2 id="word">apple</h2>
-        <p id="sentence">I eat an apple every day.</p>
-        <button id="speak-btn" class="secondary" type="button">🔁 Hear the word</button>
+    <section class="energy-wrap" aria-label="Energy timer">
+      <div class="energy-label">
+        <span>Energy</span>
+        <strong id="energy-value">100%</strong>
       </div>
-
-      <div class="challenge-card">
-        <h3 id="prompt">Tap the correct picture-word:</h3>
-        <div id="options" class="options" role="group" aria-label="Answer choices"></div>
-        <p id="feedback" class="feedback">Choose an answer to continue.</p>
-        <div class="controls">
-          <button id="next-btn" type="button" disabled>Next ➜</button>
-          <button id="restart-btn" class="ghost" type="button">Restart</button>
-        </div>
+      <div class="energy-track">
+        <div id="energy-fill" class="energy-fill"></div>
       </div>
     </section>
 
-    <section class="progress-wrap" aria-label="Progress">
-      <div id="progress-track">
-        <div id="progress-fill"></div>
-      </div>
+    <section class="card" id="card">
+      <p class="prompt" id="prompt"></p>
+      <div class="question" id="question"></div>
+
+      <button id="audio-btn" class="audio-btn hidden" type="button" aria-label="Play audio">
+        <span class="speaker">🔊</span>
+        <span class="pulse"></span>
+      </button>
+
+      <div id="options" class="options" role="group" aria-label="Choices"></div>
+      <p id="feedback" class="feedback">Get ready!</p>
     </section>
 
-    <section id="summary" class="summary hidden" aria-live="polite">
-      <h3>Great job! 🎉</h3>
-      <p id="summary-text"></p>
+    <section id="game-over" class="game-over hidden" aria-live="polite">
+      <h2>Game Over</h2>
+      <p id="final-score"></p>
+      <p id="rating"></p>
       <button id="play-again" type="button">Play Again</button>
     </section>
   </main>
